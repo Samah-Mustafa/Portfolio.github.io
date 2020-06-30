@@ -7,27 +7,26 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import img from "./assets/boatImage.jpg";
-import styled from 'styled-components';
+// import img from "./assets/boatImage.jpg";
+// import styled from 'styled-components';
+import "./Folio.css";
 
-const Styles = styled.div`
-.your-dialog-classname {
-    animation-name: breath-animation;
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
-}
-`;
+
+// const Styles = styled.div`
+
+// }
+// `;
 
 export const Folio = () => {
 
 
   return (
-    <Styles>
-    <div className = "your-dialog-classname" style = {{ display:"flex", width: "100%", padding: "60px 30px", margin: "0 auto",}}>
-    <Card style = {{ display:"flex", width: "85%", textAlign: "center", padding: "10px 0", margin: "0 auto",}}>
-      <div>
-      <CardActionArea style = {{padding: "20px"}}>
-        <CardMedia style = {{ height: "300px", padding: '0'}}
+    
+    <div  ClassName ="container" style = {{ display:"flex", width: "90%", padding: "60px 30px", margin: "auto",}}>
+    <Card ClassName ="card" style = {{ display:"flex", width: "100%", textAlign: "center", padding: "10px 0", margin: "15px",}}>
+      <div ClassName ="content">
+      <CardActionArea ClassName="logo" style = {{padding: "20px"}}>
+        <CardMedia  style = {{ height: "300px", padding: '0'}}
           component="img"
           alt="Contemplative Reptile"
           height="300"
@@ -35,7 +34,8 @@ export const Folio = () => {
           src="/src/assets/boatImage.jpg"
           title="Contemplative Reptile"
         />
-        <CardContent>
+      </CardActionArea>
+      <CardContent ClassName="hover_content">
           <Typography gutterBottom variant="h5" component="h2">
             Lizard
           </Typography>
@@ -44,18 +44,12 @@ export const Folio = () => {
             across all continents except Antarctica
           </Typography>
         </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions>
       </div>
+      </Card>
 
-      <div>
+      
+      
+      <Card style = {{ display:"flex", width: "100%", textAlign: "center", padding: "10px 0", margin: "15px",}}>
       <CardActionArea style = {{padding: "20px"}}>
         <CardMedia style = {{ height: "300px", paddingTop: '0'}}
           component="img"
@@ -75,17 +69,11 @@ export const Folio = () => {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions>
-      </div>
+      </Card>
       
-      <div>
+    
+      
+      <Card style = {{ display:"flex", width: "100%", textAlign: "center", padding: "10px 0", margin: "15px",}}>
       <CardActionArea style = {{padding: "20px"}}>
         <CardMedia style = {{ height: "300px", paddingTop: '0'}}
           component="img"
@@ -104,22 +92,47 @@ export const Folio = () => {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions>
-      </div>
     </Card>
     </div>
-    </Styles>
-
     
+
   );
 }
+
+
+
+
+
+// <Card style = {{ display:"flex", width: "100%", textAlign: "center", padding: "10px 0", margin: "0 auto",}}>
+//       <CardActionArea style = {{padding: "20px"}}>
+//         <CardMedia style = {{ height: "300px", paddingTop: '0'}}
+//           component="img"
+//           alt="Contemplative Reptile"
+//           height="300"
+//           image="https://i.ibb.co/wpjqJ8L/Vegetables.jpg"
+//           src="/src/assets/photo.jpg"
+//           title="Contemplative Reptile"
+//         />
+//         <CardContent>
+//           <Typography gutterBottom variant="h5" component="h2">
+//             Lizard
+//           </Typography>
+//           <Typography variant="body2" color="textSecondary" component="p">
+//             Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+//             across all continents except Antarctica
+//           </Typography>
+//         </CardContent>
+//       </CardActionArea>
+//       <CardActions>
+//         <Button size="small" color="primary">
+//           Share
+//         </Button>
+//         <Button size="small" color="primary">
+//           Learn More
+//         </Button>
+//       </CardActions>
+//       </Card>
+
 
 
 // <Card className={classes.root} style = {{ display:"flex", }}>
