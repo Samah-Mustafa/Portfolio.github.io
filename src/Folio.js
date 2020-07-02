@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -10,23 +10,35 @@ import Typography from '@material-ui/core/Typography';
 // import img from "./assets/boatImage.jpg";
 // import styled from 'styled-components';
 import "./Folio.css";
+import ReactDOM from 'react-dom'
+import { useSpring, animated } from 'react-spring'
 
 
-// const Styles = styled.div`
-
-// }
-// `;
 
 export const Folio = () => {
 
+    const [state, toggle] = useState(true)
+    const { x } = useSpring({ from: { x: 0 }, x: state ? 1 : 0, config: { duration: 1000 } })
 
   return (
     
-    <div  ClassName ="container" style = {{ display:"flex", width: "90%", padding: "60px 30px", margin: "auto",}}>
-    <Card ClassName ="card" style = {{ display:"flex", width: "100%", textAlign: "center", padding: "10px 0", margin: "15px",}}>
-      <div ClassName ="content">
-      <CardActionArea ClassName="logo" style = {{padding: "20px"}}>
-        <CardMedia  style = {{ height: "300px", padding: '0'}}
+    <div style = {{ display:"flex", width: "90%", padding: "20px 30px", margin: "auto",}}>
+    
+    <div onClick={() => toggle(!state)} >
+    <animated.div
+        style={{
+          opacity: x.interpolate({ range: [0, 1], output: [0.3, 1] }),
+          transform: x
+            .interpolate({
+              range: [0, 0.25, 0.35, 0.75, 1],
+              output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1]
+            })
+            .interpolate(x => `scale(${x})`)
+        }}>
+    <Card style = {{ display:"inline-block", width: "90%", textAlign: "center", padding: "10px 0", margin: "15px",}}>
+      <div >
+      <CardActionArea style = {{padding: "20px"}}>
+        <CardMedia style = {{ height: "300px", padding: '0'}}
           component="img"
           alt="Contemplative Reptile"
           height="300"
@@ -35,7 +47,7 @@ export const Folio = () => {
           title="Contemplative Reptile"
         />
       </CardActionArea>
-      <CardContent ClassName="hover_content">
+      <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             Lizard
           </Typography>
@@ -46,10 +58,21 @@ export const Folio = () => {
         </CardContent>
       </div>
       </Card>
-
+      </animated.div>
+      </div>
       
-      
-      <Card style = {{ display:"flex", width: "100%", textAlign: "center", padding: "10px 0", margin: "15px",}}>
+      <div onClick={() => toggle(!state)} >
+      <animated.div
+        style={{
+          opacity: x.interpolate({ range: [0, 1], output: [0.3, 1] }),
+          transform: x
+            .interpolate({
+              range: [0, 0.25, 0.35, 0.75, 1],
+              output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1]
+            })
+            .interpolate(x => `scale(${x})`)
+        }}>
+      <Card style = {{ display:"inline-block", width: "90%", textAlign: "center", padding: "10px 0", margin: "15px",}}>
       <CardActionArea style = {{padding: "20px"}}>
         <CardMedia style = {{ height: "300px", paddingTop: '0'}}
           component="img"
@@ -70,10 +93,21 @@ export const Folio = () => {
         </CardContent>
       </CardActionArea>
       </Card>
-      
+      </animated.div>
+      </div>
     
-      
-      <Card style = {{ display:"flex", width: "100%", textAlign: "center", padding: "10px 0", margin: "15px",}}>
+      <div onClick={() => toggle(!state)} >
+      <animated.div
+        style={{
+          opacity: x.interpolate({ range: [0, 1], output: [0.3, 1] }),
+          transform: x
+            .interpolate({
+              range: [0, 0.25, 0.35, 0.75, 1],
+              output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1]
+            })
+            .interpolate(x => `scale(${x})`)
+        }}>
+      <Card style = {{ display:"inline-block", width: "90%", textAlign: "center", padding: "10px 0", margin: "15px",}}>
       <CardActionArea style = {{padding: "20px"}}>
         <CardMedia style = {{ height: "300px", paddingTop: '0'}}
           component="img"
@@ -93,12 +127,15 @@ export const Folio = () => {
         </CardContent>
       </CardActionArea>
     </Card>
+    </animated.div>
     </div>
     
-
+    </div>
   );
 }
 
+
+// style = {{ display:"flex", width: "100%", padding: "20px 30px", margin: "auto",}}
 
 
 
