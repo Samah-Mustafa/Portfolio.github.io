@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Jumbotron as Jumbo, Container } from 'react-bootstrap';
-import styled from 'styled-components';
+import { Jumbotron as Jumbo } from 'react-bootstrap';
+// import { Jumbotron as Jumbo, Container } from 'react-bootstrap';
+// import styled from 'styled-components';
 import { useTrail, animated } from 'react-spring';
 import "./Folio.css";
-import { render } from 'react-dom'
+// import { render } from 'react-dom'
 
 
 const items = ["Welcome to", "Samah Mustafa's", "Website"]
