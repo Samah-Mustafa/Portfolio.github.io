@@ -8,7 +8,7 @@ import image02 from "./assets/LinkedIn.png";
 export const About = () => {
     return (  
       <div style={{width: "750px", margin: "auto", marginTop: "90px", fontSize: "20px", textAlign: "justify", }}>
-          <p>My name is <b>Samah Mustafa</b>. I'm a graduate from Faculty of Art and Design (field of specialization: Graphic Design and Advertising).
+          <p>Hi my name is <b>Samah Mustafa</b>. I'm a graduate from Faculty of Art and Design (field of specialization: Graphic Design and Advertising).
           I’m passionate about creating and producing high-quality work, dedicated to create designs that attract the eye.
           I found it interested to generate new ideas to get as close as possible to the target.
           One of my favourite challenges is to draft ideas that fit the brief or help bringing a creative angle if the client doesn’t entirely know what he’s after till I make sure that work is done.</p>
