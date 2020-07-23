@@ -27,7 +27,7 @@ export const NavigationBar = () => {
                 <Nav.Link href="/about">About</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                <Nav.Link href="/Portfolio">Portfolio</Nav.Link>
+                <Nav.Link href="/Works">Works</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                 <Nav.Link href="/contact">Contact</Nav.Link>
@@ -38,21 +38,3 @@ export const NavigationBar = () => {
 }
 
 
-
-// <Nav.Item>
-// <Nav.Link href="/portfolio">Portfolio</Nav.Link>
-// </Nav.Item>
-
-// <Navbar expand='lg'>
-//                 <Navbar.Brand href="/"></Navbar.Brand>
-//                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
-//                 <Navbar.Collapse id="basic-navbar-nav">
-//                     <Nav className="ml-auto">
-//                         <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item>
-//                         <Nav.Item><Nav.Link href="/about">About</Nav.Link></Nav.Item>
-//                         <Nav.Item><Nav.Link href="/contact">Contact</Nav.Link></Nav.Item>
-//                     </Nav>
-//                 </Navbar.Collapse>
-//             </Navbar>
-
-// <Navbar.Brand href="/">Code Life</Navbar.Brand>
