@@ -27,7 +27,7 @@ export const NavigationBar = () => {
                 <Nav.Link href="/about">About</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                <Nav.Link href="/Folio">Portfolio</Nav.Link>
+                <Nav.Link href="/Portfolio">Portfolio</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                 <Nav.Link href="/contact">Contact</Nav.Link>

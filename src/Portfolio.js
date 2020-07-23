@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 
 
 
-export const Folio = () => {
+export const Portfolio = () => {
 
   return (
     

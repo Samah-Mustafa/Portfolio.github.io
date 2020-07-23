@@ -1,10 +1,10 @@
 import React from 'react';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css';
 import { Home } from './Home';
 import { About } from './About';
 import { Contact } from './Contact';
-import { Folio } from './Folio';
+import { Portfolio } from './Portfolio';
 import { NoMatch } from './NoMatch';
 import { NavigationBar } from './components/NavigationBar'
 
@@ -18,7 +18,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
-            <Route path="/folio" component={Folio} />
+            <Route path="/portfolio" component={Portfolio} />
             <Route component={NoMatch} />
           </Switch>
         </Router>
