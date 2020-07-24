@@ -32,7 +32,8 @@ export const Works = () => {
           Watch Movies
         </Typography>
         <Typography variant="body2" color="textSecondary" component="p">
-          Website for watching movies from all over the world, with a list of the best actors and the most famous ones.
+          Website for watching movies from all over the world, with a list of the best actors and the most famous ones.<br/>
+          Don't take a look
         </Typography>
       </CardContent>
     </CardActionArea>

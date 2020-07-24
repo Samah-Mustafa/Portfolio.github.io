@@ -1,30 +1,41 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { HashRouter, Route, Link } from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import { Home } from './Home';
 import { About } from './About';
 import { Contact } from './Contact';
 import { Works } from './Works';
-import { NoMatch } from './NoMatch';
-import { NavigationBar } from './components/NavigationBar'
+// import { NoMatch } from './NoMatch';
+// import { NavigationBar } from './components/NavigationBar'
 
 
 function App() {
   return (
     <React.Fragment>
-    <NavigationBar />
-        <Router>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/works" component={Works} />
-            <Route path="*" component={NoMatch} />
-          </Switch>
-        </Router>
+      <HashRouter basename='/'>
+      <div className="background">   
+        <div>
+          <ul className="nav1">
+            <li><Link className="link" to="/">Home</Link></li>
+            <li><Link className="link" to="/about">About</Link></li>
+            <li><Link className="link" to="/works">Works</Link></li>
+            <li><Link className="link" to="/contact">Contact</Link></li>
+          </ul>
+        </div>
+
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route exact path="/works" component={Works} />
+          <Route path="/contact" component={Contact} />
+      </div> 
+        
+      </HashRouter>
     </React.Fragment>
   );
 }
+
+
 
 export default App;
 
@@ -49,6 +60,19 @@ export default App;
 //   </React.Fragment>
 // );
 
+
+// <React.Fragment>
+//     <NavigationBar />
+//         <Router>
+//           <Switch>
+//             <Route exact path="/" component={Home} />
+//             <Route path="/about" component={About} />
+//             <Route path="/contact" component={Contact} />
+//             <Route path="/folio" component={Folio} />
+//             <Route component={NoMatch} />
+//           </Switch>
+//         </Router>
+//     </React.Fragment>
 
 
 

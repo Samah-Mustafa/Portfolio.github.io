@@ -26,7 +26,7 @@ export const Contact = () => {
             </Form.Group>
 
             <Form.Group controlId="formBasicCheckbox">
-            <Form.Label>Example textarea</Form.Label>
+            <Form.Label>Write to me</Form.Label>
             <Form.Control as="textarea" rows="3" />
             </Form.Group>
             <Button variant="secondary" type="submit">
