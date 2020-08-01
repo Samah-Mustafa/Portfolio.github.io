@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { Form, Button } from 'react-bootstrap';
 import styled from 'styled-components';
+import * as emailjs from 'emailjs-com';
+
+// import './ContactUs.css';
 
 const Styles = styled.div`
 .your-dialog-classname {
@@ -11,28 +14,52 @@ const Styles = styled.div`
 
 
 export const Contact = () => {
+
+    function sendEmail(e) {
+        e.preventDefault();
+    
+        emailjs.sendForm('gmail', 'template2', e.target, 'user_a8vtwSAHyCvf5fim9Sbv4')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+          e.target.reset()
+      }
+
     return (
         <Styles>
-        <div ClassName="your-dialog-classname" style= {{width: "550px", margin: "auto", marginTop: "70px"}}>
+        <div ClassName="your-dialog-classname"
+        style= {{width: "550px", margin: "auto", marginTop: "70px"}}>
+
             <h1 style= {{fontWeight: "bold"}}>Contact Me</h1>
             <br></br>
-            <Form>
+            <Form onSubmit={sendEmail}>
+
+            <Form.Group controlId="formBasicName">
+                <Form.Label>Name</Form.Label>
+                <Form.Control type="text" placeholder="Enter your name" name="name" />
+                <Form.Text className="text-muted">
+                </Form.Text>
+            </Form.Group>
+
             <Form.Group controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
+                <Form.Control type="email" placeholder="Enter email" name="email" />
                 <Form.Text className="text-muted">
-                I will never hack you I promise
                 </Form.Text>
             </Form.Group>
 
             <Form.Group controlId="formBasicCheckbox">
-            <Form.Label>Example textarea</Form.Label>
-            <Form.Control as="textarea" rows="3" />
+            <Form.Label>Write to me</Form.Label>
+            <Form.Control as="textarea" rows="3" name="message"/>
             </Form.Group>
             <Button variant="secondary" type="submit">
                 Submit
             </Button>
+            
             </Form>
+            
         </div>
         </Styles>
     )

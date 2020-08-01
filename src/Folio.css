@@ -6,3 +6,51 @@
     --animate-duration: 800ms;
     --animate-delay: 0.9s;
   }
+
+.main {
+  width: 100%;
+  background: linear-gradient(-45deg, #ee7752, #f01c6e, #c0018a, #f56893);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+
+.container {
+  width: 100% !important;
+  height: 95vh !important;
+  font-family: "Exo", sans-serif;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+  
+  
+  h1 {
+    font-weight: 300;
+  }
+  
+  h3 {
+    color: #eee;
+    font-weight: 100;
+  }
+  
+  h5 {
+    color:#eee;
+    font-weight:300;
+  }
+  
+  a,
+  a:hover {
+    text-decoration: none;
+    color: #ddd;
+  }
+  

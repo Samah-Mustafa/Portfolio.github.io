@@ -21,6 +21,3 @@ export const About = () => {
       </div>
     )
 }
-
-
-// <img src={img} className="App-logo" alt="logo" />
