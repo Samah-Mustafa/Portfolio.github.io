@@ -34,5 +34,6 @@ export const NavigationBar = () => {
                 </Nav.Item>
                 </Nav>
         </Styles>
+        
     )
 }
