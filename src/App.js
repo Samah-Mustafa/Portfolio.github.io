@@ -1,16 +1,15 @@
 import React from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom'
+import { HashRouter, Route, Link } from 'react-router-dom'
 import './App.css';
 import { Home } from './Home';
 import { About } from './About';
 import { Contact } from './Contact';
 import { Folio } from './Folio';
 // import { NoMatch } from './NoMatch';
-import {Link} from "react-router-dom";
 
 function App() {
   return (
-  
+    <React.Fragment>
         <HashRouter basename='/'>
         <div className="nav">
          <ul>
@@ -26,7 +25,7 @@ function App() {
          <Route path="/contact" component={Contact} />
         </div>
        </HashRouter>
-      
+       </React.Fragment>
   
   );
 }
