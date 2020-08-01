@@ -5,12 +5,12 @@ import * as emailjs from 'emailjs-com';
 
 // import './ContactUs.css';
 
-const Styles = styled.div`
-.your-dialog-classname {
-    display: block; 
-    padding-left: 0px;
-}
-`;
+// const Styles = styled.div`
+// .your-dialog-classname {
+//     display: block; 
+//     padding-left: 0px;
+// }
+// `;
 
 
 export const Contact = () => {
@@ -28,9 +28,9 @@ export const Contact = () => {
       }
 
     return (
-        <Styles>
+        
         <div ClassName="your-dialog-classname"
-        style= {{width: "550px", margin: "auto", marginTop: "70px"}}>
+        style= {{width: "550px", margin: "0 auto", marginTop: "70px", }}>
 
             <h1 style= {{fontWeight: "bold"}}>Contact Me</h1>
             <br></br>
@@ -61,6 +61,6 @@ export const Contact = () => {
             </Form>
             
         </div>
-        </Styles>
+       
     )
 }

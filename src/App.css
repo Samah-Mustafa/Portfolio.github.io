@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul {
+    list-style: none;
+    background-color: #f01c6e;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+    width : 100%;
+}
+
+.nav li {
+    display: inline-block;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    width: 100px;
+    display: block;
+    padding: 20px 10px 20px 10px;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
