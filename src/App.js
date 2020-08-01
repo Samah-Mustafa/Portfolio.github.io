@@ -11,8 +11,8 @@ import { NavigationBar } from './components/NavigationBar'
 function App() {
   return (
     <React.Fragment>
+    <NavigationBar />
         <Router>
-        <NavigationBar />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
